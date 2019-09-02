@@ -108,10 +108,34 @@ Reboot Slave Node
 > $ sudo reboot
 
 Check if the NFS Diretory Mounted  
-check for master
+check for 'master' hostname
 > $ df -h
 
 Copy Master SSH key to Slave  
 Enter Password if Necessery
 > $ scp master:/home/pi/.ssh/id_rsa /home/pi/.ssh/authorized_keys
 
+#### Testing MPI Cluster on Master
+
+Create machinefile
+> nano machinefile
+```
+master
+node1
+node2
+node3
+node4
+node5
+```
+
+Check if All node repond
+> $ mpiexec -f machinefile -n 6 hostname
+you will the output as
+```
+master
+node1
+node2
+node3
+node4
+node5
+```
