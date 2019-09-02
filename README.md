@@ -129,7 +129,8 @@ node5
 ```
 
 Check if All node repond
-> $ mpiexec -f machinefile -n 6 hostname  
+> $ mpiexec -f machinefile -n 6 hostname
+
 you will the output as
 ```
 master
