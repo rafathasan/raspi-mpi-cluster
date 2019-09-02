@@ -55,9 +55,30 @@ Start SSH on boot
 
 #### Setting up Master Node
 
+Install NFS Server on Master
 > $ sudo apt-get install nfs-server
 
-Create a List of Static IPs of Nodes
+Make shared Folder in Home Directory
+> $ mkdir shared
+
+Change Directory Permission
+> $ sudo chmod -R 777 shared
+
+Set shared folder on NFS Server
+> $ echo "/home/pi/shared nfs 192.168.0.100(rw, sync, no_root_squash,no_subtree_check)" >> /etc/exports
+
+Set Node Host Name
+> $ nano /etc/hosts
+
+```
+192.168.0.100 master
+192.168.0.101 node1
+192.168.0.102 node2
+192.168.0.103 node3
+192.168.0.104 node4
+192.168.0.105 node5
+```
+Create a List of Static IPs of Nodes -> nodes.txt
 ```
 192.168.0.100
 192.168.0.101
@@ -66,3 +87,5 @@ Create a List of Static IPs of Nodes
 192.168.0.104
 192.168.0.105
 ```
+
+
