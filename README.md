@@ -8,7 +8,7 @@
 - Support TeX (LaTeX expressions, Based on KaTeX), Flowchart and Sequence Diagram of Markdown extended syntax;
 - Support AMD/CMD (Require.js & Sea.js) Module Loader, and Custom/define editor plugins;
 ---
-##Pre-requisite
+## Pre-requisite
 - Get yourself a Linux OS. Ubuntu Prefered
 - Download the Pre-build Raspbian, [Link](https://drive.google.com/open?id=1ZE4F_4L35xWDauFQV3xF_Dgn57y48GdF)
 
