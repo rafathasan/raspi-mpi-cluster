@@ -26,6 +26,10 @@ Disable Bluetooth
 
 > $ echo "dtoverlay=pi3-disable-bt" | sudo tee -a /boot/config.txt
 
+Disable systemd service UART
+
+> sudo systemctl disable hciuart
+
 Set Autologin CLI
 > $ sudo raspi-config nonint do_boot_behaviour B2
 
