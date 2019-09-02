@@ -1,13 +1,3 @@
-## Features
-
-- Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
-- Full-featured: Real-time Preview, Image (cross-domain) upload, Preformatted text/Code blocks/Tables insert, Code fold, Search replace, Read only, Themes, Multi-languages, L18n, HTML entities, Code syntax highlighting...;
-- Markdown Extras : Support ToC (Table of Contents), Emoji, Task lists, @Links...;
-- Compatible with all major browsers (IE8+), compatible Zepto.js and iPad;
-- Support identification, interpretation, fliter of the HTML tags;
-- Support TeX (LaTeX expressions, Based on KaTeX), Flowchart and Sequence Diagram of Markdown extended syntax;
-- Support AMD/CMD (Require.js & Sea.js) Module Loader, and Custom/define editor plugins;
----
 ## Pre-requisite
 - Get yourself a Linux OS. Ubuntu Prefered
 - Download the Pre-build Raspbian, [Link](https://drive.google.com/open?id=1ZE4F_4L35xWDauFQV3xF_Dgn57y48GdF)
@@ -67,7 +57,7 @@ Change Directory Permission
 Set shared folder on NFS Server
 > $ echo "/home/pi/shared nfs 192.168.0.100(rw, sync, no_root_squash,no_subtree_check)" >> /etc/exports
 
-Create a List of Static IPs of Nodes -> ~/nodes.txt
+Create a List of IPs of Nodes -> ~/nodes.txt
 ```
 192.168.0.100
 192.168.0.101
