@@ -90,6 +90,7 @@ Set Node Hostname
 ```
 
 Create SSH Master key
+Hit Enter Do not Enter Passphase
 > $ ssh-keygen
 
 #### Setting up Slave Node (Do this on Each Slave Node)
@@ -103,5 +104,14 @@ Create shared directory
 Setting Up Auto Mount on Boot
 > $ echo "master:/home/pi/shared /home/pi/shared nfs rwx 0 0"
 
+Reboot Slave Node
 > $ sudo reboot
+
+Check if the NFS Diretory Mounted
+check for master
+> $ df -h
+
+Copy Master SSH key to Slave
+Enter Password if Necessery
+> $ scp master:/home/pi/.ssh/id_rsa /home/pi/.ssh/authorized_keys
 
