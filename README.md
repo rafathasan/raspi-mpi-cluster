@@ -131,11 +131,11 @@ Check if All node repond
 > $ mpiexec -f machinefile -n 6 hostname
 
 you will the output as
-```
+````
 master
 node1
 node2
 node3
 node4
 node5
-```
+````
