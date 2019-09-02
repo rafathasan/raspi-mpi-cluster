@@ -83,6 +83,19 @@ Create SSH Master key
 Hit Enter Do not Enter Passphase
 > $ ssh-keygen
 
+Login through SSH to Slave Nodes and create SSH key  
+Hit Enter Do not Enter Passphase
+> $ ssh pi@XXX.XXX.XXX.XXX
+
+> nodeX$ ssh-keygen
+
+> nodeX$ scp master:/home/pi/.ssh/id_rsa.pub /home/pi/.ssh/authorized_keys
+
+> nodeX$ exit
+
+Get Slave SSH key via SCP
+> $ scp nodeX:/home/pi/.ssh/id_rsa.pub /dev/stdout && cat /dev/stdout >> /home/pi/.ssh/authorized_keys
+
 #### Setting up Slave Node (Do this on Each Slave Node)
 
 Set Master Node Hostname
@@ -100,10 +113,6 @@ Reboot Slave Node
 Check if the NFS Diretory Mounted  
 check for 'master' hostname
 > $ df -h
-
-Copy Master SSH key to Slave  
-Enter Password if Necessery
-> $ scp master:/home/pi/.ssh/id_rsa /home/pi/.ssh/authorized_keys
 
 #### Testing MPI Cluster on Master
 
