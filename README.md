@@ -38,6 +38,7 @@ Start SSH on boot
 ### Image Installation
 
 > $ gzip -d mpi_raspbian_lite.img.gz
+
 > $ dd if=clone.img of=/dev/sdX
 
 ---
