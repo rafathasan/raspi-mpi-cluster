@@ -1,8 +1,8 @@
-## Pre-requisite
+# Pre-requisite
 - Get yourself a Linux OS. Ubuntu Prefered
 - Download the Pre-build Raspbian, [Link](https://drive.google.com/open?id=1ZE4F_4L35xWDauFQV3xF_Dgn57y48GdF)
 
-#### Things are done in pre-build raspbian (no need to run if you download the pre-build raspbian)
+### Things are done in pre-build raspbian (no need to run if you download the pre-build raspbian)
 MPICH installed.
 > $ sudo apt-get update && sudo apt-get install mpich
 
@@ -29,7 +29,7 @@ Set LAN wait on Boot
 Start SSH on boot
 > $ sudo raspi-config nonint do_ssh 1
 
-### Image Installation after Downloading the pre-build raspbian
+## Image Installation after Downloading the pre-build raspbian
 
 > $ gzip -d mpi_raspbian_lite.img.gz
 
@@ -37,13 +37,13 @@ Start SSH on boot
 
 ---
 
-## Setting Up Cluster
+# Setting Up Cluster
 
-### Terminology
+## Terminology
 - Each Node need to be connected to master Node in order to run the execution command from the master. This will be done via SSH. We are going to override SSH authorization to get rid of human-interaction and make it automate to commnucate seamlessly node to node.
 - In order to run the execution command, the source file must exsist on each nodes. Here comes the shared data, we can use NFS Server which stands for network file system. we need to modifiy some of its configuration to allow outbound connection and auto mount the file system in the slave nodes.
 
-#### Setting up Master Node
+### Setting up Master Node
 
 Install NFS Server on Master
 > $ sudo apt-get install nfs-server
@@ -96,7 +96,7 @@ Hit Enter Do not Enter Passphase
 Get Slave SSH key via SCP
 > $ scp nodeX:/home/pi/.ssh/id_rsa.pub /dev/stdout && cat /dev/stdout >> /home/pi/.ssh/authorized_keys
 
-#### Setting up Slave Node (Do this on Each Slave Node)
+### Setting up Slave Node (Do this on Each Slave Node)
 
 Set Master Node Hostname
 > $ echo"192.168.0.100 master" >> /etc/hosts
@@ -114,7 +114,7 @@ Check if the NFS Diretory Mounted
 check for 'master' hostname
 > $ df -h
 
-#### Testing MPI Cluster on Master
+### Testing MPI Cluster on Master
 
 Create machinefile
 > nano machinefile
