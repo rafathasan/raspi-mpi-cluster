@@ -89,7 +89,7 @@ Set Node Hostname
 192.168.0.105 node5
 ```
 
-Create SSH Master key
+Create SSH Master key  
 Hit Enter Do not Enter Passphase
 > $ ssh-keygen
 
@@ -107,11 +107,11 @@ Setting Up Auto Mount on Boot
 Reboot Slave Node
 > $ sudo reboot
 
-Check if the NFS Diretory Mounted
+Check if the NFS Diretory Mounted  
 check for master
 > $ df -h
 
-Copy Master SSH key to Slave
+Copy Master SSH key to Slave  
 Enter Password if Necessery
 > $ scp master:/home/pi/.ssh/id_rsa /home/pi/.ssh/authorized_keys
 
