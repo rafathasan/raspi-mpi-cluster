@@ -12,7 +12,7 @@
 - Get yourself a Linux OS. Ubuntu Prefered
 - Download the Pre-build Raspbian, [Link](https://drive.google.com/open?id=1ZE4F_4L35xWDauFQV3xF_Dgn57y48GdF)
 
-#### Things are done in pre-build 
+#### Things are done in pre-build raspbian
 MPICH installed.
 > $ sudo apt-get update && sudo apt-get install mpich
 
@@ -53,4 +53,16 @@ Start SSH on boot
 - Each Node need to be connected to master Node in order to run the execution command from the master. This will be done via SSH. We are going to override SSH configureation to get rid of human-interaction and make it automate to commnucate seamlessly node to node.
 - In order to run the execution command, the source file must exsist on each nodes. Here comes the shared data, we can use NFS Server which stands for network file system. we need to modifiy some of its configuration to allow outbound connection and auto mount the file system in the slave nodes.
 
->$ sudo
+#### Setting up Master Node
+
+> $ sudo apt-get install nfs-server
+
+Create a List of Static IPs of Nodes
+```
+192.168.0.100
+192.168.0.101
+192.168.0.102
+192.168.0.103
+192.168.0.104
+192.168.0.105
+```
