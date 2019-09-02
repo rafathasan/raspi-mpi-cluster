@@ -2,7 +2,7 @@
 - Get yourself a Linux OS. Ubuntu Prefered
 - Download the Pre-build Raspbian, [Link](https://drive.google.com/open?id=1ZE4F_4L35xWDauFQV3xF_Dgn57y48GdF)
 
-#### Things are done in pre-build raspbian
+#### Things are done in pre-build raspbian (no need to run if you download the pre-build raspbian)
 MPICH installed.
 > $ sudo apt-get update && sudo apt-get install mpich
 
