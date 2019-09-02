@@ -67,7 +67,17 @@ Change Directory Permission
 Set shared folder on NFS Server
 > $ echo "/home/pi/shared nfs 192.168.0.100(rw, sync, no_root_squash,no_subtree_check)" >> /etc/exports
 
-Set Node Host Name
+Create a List of Static IPs of Nodes -> ~/nodes.txt
+```
+192.168.0.100
+192.168.0.101
+192.168.0.102
+192.168.0.103
+192.168.0.104
+192.168.0.105
+```
+
+Set Node Hostname
 > $ nano /etc/hosts
 
 ```
@@ -78,14 +88,20 @@ Set Node Host Name
 192.168.0.104 node4
 192.168.0.105 node5
 ```
-Create a List of Static IPs of Nodes -> nodes.txt
-```
-192.168.0.100
-192.168.0.101
-192.168.0.102
-192.168.0.103
-192.168.0.104
-192.168.0.105
-```
 
+Create SSH Master key
+> $ ssh-keygen
+
+#### Setting up Slave Node (Do this on Each Slave Node)
+
+Set Master Node Hostname
+> $ echo"192.168.0.100 master" >> /etc/hosts
+
+Create shared directory
+> $ mkdir shared
+
+Setting Up Auto Mount on Boot
+> $ echo "master:/home/pi/shared /home/pi/shared nfs rwx 0 0"
+
+> $ sudo reboot
 
