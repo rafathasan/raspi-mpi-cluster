@@ -40,7 +40,7 @@ Start SSH on boot
 ## Setting Up Cluster
 
 ### Terminology
-- Each Node need to be connected to master Node in order to run the execution command from the master. This will be done via SSH. We are going to override SSH configureation to get rid of human-interaction and make it automate to commnucate seamlessly node to node.
+- Each Node need to be connected to master Node in order to run the execution command from the master. This will be done via SSH. We are going to override SSH authorization to get rid of human-interaction and make it automate to commnucate seamlessly node to node.
 - In order to run the execution command, the source file must exsist on each nodes. Here comes the shared data, we can use NFS Server which stands for network file system. we need to modifiy some of its configuration to allow outbound connection and auto mount the file system in the slave nodes.
 
 #### Setting up Master Node
