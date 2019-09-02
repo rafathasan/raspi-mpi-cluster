@@ -29,7 +29,7 @@ Set LAN wait on Boot
 Start SSH on boot
 > $ sudo raspi-config nonint do_ssh 1
 
-### Image Installation
+### Image Installation after Downloading the pre-build raspbian
 
 > $ gzip -d mpi_raspbian_lite.img.gz
 
