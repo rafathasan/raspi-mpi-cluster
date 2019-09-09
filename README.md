@@ -127,7 +127,7 @@ node4
 node5
 ```
 
-Check if All node repond
+Check if All node respond
 > $ mpiexec -f machinefile -n 6 hostname
 
 you will the output as
