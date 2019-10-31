@@ -130,7 +130,7 @@ node5
 Check if All node respond
 > $ mpiexec -f machinefile -n 6 hostname
 
-you will the output as
+you will see the output look like this
 ````
 master
 node1
